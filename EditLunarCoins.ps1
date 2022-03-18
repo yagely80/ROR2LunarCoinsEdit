@@ -5,4 +5,4 @@ $filepath = $path+"\\"+(Get-ChildItem $path).Name
 
 $content = Get-Content $filepath
 $content = $content -replace "<coins>.*</coins>","<coins>1000000000</coins>"
-Out-File -FilePath $filepath -InputObject $content
+Out-File -FilePath $filepath -InputObject $content -Encoding ascii
